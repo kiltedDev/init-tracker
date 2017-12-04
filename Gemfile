@@ -8,6 +8,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'dotenv-rails'
 gem 'react_on_rails', '10.0.2'
+gem "webpacker", "~> 3.0"
+gem "foreman"
 
 group :development do
   gem 'listen', '~> 3.0.5'
@@ -18,7 +20,7 @@ end
 group :development, :test do
   gem 'faker'
   gem 'capybara'
-  gem 'factory_girl_rails'
+  gem 'factory_bot_rails'
   gem 'launchy', require: false
   gem 'pry-rails'
   gem 'rspec-rails', '~> 3.5'
