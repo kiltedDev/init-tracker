@@ -40,16 +40,4 @@ feature "table created from relevant information" do
 
     click_button 'Create Tracker'
   end
-
-  scenario "user goes to show page for a submission for comments" do
-    steven = FactoryGirl.create(:user)
-
-    first_comment = FactoryGirl.create(:comment, submission: @min_submission, user: steven)
-
-    login_as(steven, :scope => :user)
-    visit submission_path(@min_submission)
-
-    expect(page).to have_content(first_comment.body)
-    expect(page).to have_content(steven.username)
-  end
 end
